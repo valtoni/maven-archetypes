@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+  <parent>
+		<groupId>org.app</groupId>
+    <artifactId>apptest</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+  <name>app-ejb</name>
+  <artifactId>app-ejb</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>ejb</packaging>
+  
+	<dependencies>
+
+		<dependency>
+			<groupId>javax.ejb</groupId>
+			<artifactId>ejb-api</artifactId>
+			<version>3.0</version>
+			<scope>provided</scope>
+		</dependency>	
+
+
+		<!-- APIs de Suporte Necessárias -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+  	</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ejb-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+						</manifest>
+					</archive>
+					<ejbVersion>3.0</ejbVersion>
+				</configuration>
+			</plugin>
+
+
+ 						
+		</plugins>
+
+	</build>
+
+
+</project>
